@@ -3,30 +3,51 @@
 
 namespace App\Controller;
 
-class ArticlesController extends AppController
-{
+class ArticlesController extends AppController{
 
     public function index()
     {
-        $articles = $this->Articles->find('all')->contain(['Authors','Comments']);
+        $articles = $this->Articles->find('all')->contain(['Authors', 'Comments', 'UnapprovedComments', 'Tags']);
         $this->set(compact('articles'));
+		
+		$loginuser = $this->Auth->user();
+		$this->set(compact('loginuser'));
     }
     public function view($id = null)
     {
-        $article = $this->Articles->get($id);
+        $article = $this->Articles->get($id, [
+			'contain' => ['Comments', 'UnapprovedComments', 'Tags']
+		]);
         $this->set(compact('article'));
-		$query = $this->Articles->Authors->get($article->user_id);
-		$this->set(compact('query'));
+		
+		$user = $this->Articles->Authors->get($article->user_id);
+		$this->set(compact('user'));
+		
+		$loginuser = $this->Auth->user();
+		$this->set(compact('loginuser'));
     }	
 	
     public function add()
     {
         $article = $this->Articles->newEntity();
+		
         if ($this->request->is('post')) {
-            $article = $this->Articles->patchEntity($article, $this->request->data);
+
+			$data = [
+				'title' => $this->request->data['title'],
+				'body' => $this->request->data['body'],
+				'user_id' => $this->Auth->user('id'),
+				'tags' => [
+					'_ids'=>$this->request->data['tags']
+				]
+			];	
 			
+            $article = $this->Articles->patchEntity($article, $data,[
+				'associated' => ['Tags' => ['validate' => false]]
+			]);		
+
 			// Added this line
-			$article->user_id = $this->Auth->user('id');
+			//$article->user_id = $this->Auth->user('id');
 			// You could also do the following
 			//$newData = ['user_id' => $this->Auth->user('id')];
 			//$article = $this->Articles->patchEntity($article, $newData);
@@ -38,12 +59,26 @@ class ArticlesController extends AppController
             $this->Flash->error(__('Unable to add your article.'));
         }
         $this->set('article', $article);
+		
+		$loginuser = $this->Auth->user();
+		$this->set(compact('loginuser'));		
     }	
 	public function edit($id = null)
 	{
-		$article = $this->Articles->get($id);
+		$article = $this->Articles->get($id, [
+			'contain' => ['Comments', 'UnapprovedComments', 'Tags']
+		]);
+		
 		if ($this->request->is(['post', 'put'])) {
-			$this->Articles->patchEntity($article, $this->request->data);
+			
+			$this->Articles->patchEntity($article, $this->request->data, [
+				'associated' => [
+					'Tags',
+					'Comments',
+					'UnapprovedComments'
+				]
+			]);
+			
 			if ($this->Articles->save($article)) {
 				$this->Flash->success(__('Your article has been updated.'));
 				return $this->redirect(['action' => 'index']);
@@ -52,6 +87,9 @@ class ArticlesController extends AppController
 		}
 
 		$this->set('article', $article);
+		
+		$loginuser = $this->Auth->user();
+		$this->set(compact('loginuser'));		
 	}	
 	public function delete($id)
 	{

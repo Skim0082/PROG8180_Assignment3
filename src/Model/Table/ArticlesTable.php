@@ -15,7 +15,24 @@ class ArticlesTable extends Table
 			'foreignKey'=>'user_id'
 		]);
 		
-		$this->hasMany('Comments');
+		$this->hasMany('Comments', [
+			'className' => 'Comments',
+			'foreignKey' => 'article_id',
+			'dependent' => true,
+			'conditions' => ['approved' => true]
+		]);
+		
+		$this->hasMany('UnapprovedComments', [
+			'className' => 'Comments',
+			'foreignKey' => 'article_id',
+			'dependent' => true,			
+			'conditions' => ['approved' => false],
+            'propertyName' => 'unapproved_comments'
+		]);	
+		
+		$this->belongsToMany('Tags', [
+			'joinTable' => 'articles_tags'
+		]);
     }
     public function validationDefault(Validator $validator)
     {
