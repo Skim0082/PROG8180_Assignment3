@@ -20,9 +20,8 @@ class AppController extends Controller
                 'action' => 'index'
             ],
             'logoutRedirect' => [
-                'controller' => 'Users',
-                'action' => 'login',
-                'home'
+                'controller' => 'Articles',
+                'action' => 'index'
             ]
         ]);
     }
