@@ -28,5 +28,5 @@
        - http://localhost/Assignment3/users/add
   -  **Author password** : all Authors password are same with **aaa**
 
-![Build Status](https://github.com/Skim0082/PROG8180_Assignment3/blob/master/tablerelation.jpg)
+![Build Status](https://github.com/Skim0082/PROG8180_Assignment3/blob/master/tablesRelation.JPG)
 ![Build Status](https://github.com/Skim0082/PROG8180_Assignment3/blob/master/Screenshot01.png)
