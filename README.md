@@ -17,7 +17,7 @@
   - admin can see all and edit, delete comments as well.
 
 ###Blog Articles Url 
-  - **Articles List** : ```http://localhost/Assignment3/Articles/index```
+  - **Articles List** : ```http://localhost/Assignment3/articles/index```
   - **Add new article** : ```http://localhost/Assignment3/articles/add```
   - **Log in** : ```http://localhost/Assignment3/users/login```
 
