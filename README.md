@@ -17,7 +17,7 @@
   - admin can see all and edit, delete comments as well.
 
 ###Blog Articles Url 
-  - **'Assignment3'** in the URL is **case sensitive** and others are case insensitive.
+  - **'Assignment3'** in the below URL is **case sensitive** and others are case insensitive.
   - **Articles List** : ```http://localhost/Assignment3/articles/index```
   - **Add new article** : ```http://localhost/Assignment3/articles/add```
   - **Log in** : ```http://localhost/Assignment3/users/login```
