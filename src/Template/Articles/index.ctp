@@ -65,7 +65,7 @@
 						
 								echo " - ";
 								echo $this->Form->postLink(
-									'[Delete]',
+									'[Del]',
 									['controller' => 'Comments', 'action' => 'delete', $comment->id],
 									['confirm' => 'Are you sure?']
 								);									
