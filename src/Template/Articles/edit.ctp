@@ -60,7 +60,7 @@
 			}			
 			
 		}
-		echo $this->Form->button(__('Save Article'));
+		echo $this->Form->button(__('Edit Article'));
 		echo $this->Form->end();
 	?>
 </div>
