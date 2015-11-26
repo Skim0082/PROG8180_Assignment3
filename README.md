@@ -17,15 +17,15 @@
   - admin can see all and edit, delete comments as well.
 
 ###Blog Articles Url 
-  - **Articles List** : ```http://localhost/Assignment3/Articles/index```
-  - **Add new article** : ```http://localhost/Assignment3/articles/add```
-  - **Log in** : ```http://localhost/Assignment3/users/login```
+  **Articles List** : ```http://localhost/Assignment3/Articles/index```
+  **Add new article** : ```http://localhost/Assignment3/articles/add```
+  **Log in** : ```http://localhost/Assignment3/users/login```
 
 ## LogIn Information
-    - **login access as admin** : user name / password --> **admin** / **admin**
-      - above Assignment3_DB.sql includes admin data in the users table
-      - if users table has no data of admin, can add the add page as below;
-        - http://localhost/Assignment3/users/add
-      - another Author login: all Authors password are same with 'aaa'
+    **login access as admin** : user name / password --> **admin** / **admin**
+     - above Assignment3_DB.sql includes admin data in the users table
+     - if users table has no data of admin, can add the add page as below;
+       - http://localhost/Assignment3/users/add
+     - another Author login: all Authors password are same with 'aaa'
 
 
