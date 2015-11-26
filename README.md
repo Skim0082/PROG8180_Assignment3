@@ -26,6 +26,6 @@
      - above Assignment3_DB.sql includes admin data in the users table
      - if users table has no data of admin, can add the add page as below;
        - http://localhost/Assignment3/users/add
-     - another Author login: all Authors password are same with 'aaa'
+  -  **Author password** : all Authors password are same with **aaa**
 
 
