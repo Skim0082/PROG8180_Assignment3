@@ -28,4 +28,4 @@
        - http://localhost/Assignment3/users/add
   -  **Author password** : all Authors password are same with **aaa**
 
-(https://github.com/Skim0082/PROG8180_Assignment3/blob/master/Screenshot01.png)
+[![Build Status](https://github.com/Skim0082/PROG8180_Assignment3/blob/master/Screenshot01.png)
