@@ -22,7 +22,7 @@
   **Log in** : ```http://localhost/Assignment3/users/login```
 
 ## LogIn Information
-    **login access as admin** : user name / password --> **admin** / **admin**
+**login access as admin** : user name / password --> **admin** / **admin**
      - above Assignment3_DB.sql includes admin data in the users table
      - if users table has no data of admin, can add the add page as below;
        - http://localhost/Assignment3/users/add
