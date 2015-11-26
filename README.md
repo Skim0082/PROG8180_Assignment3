@@ -1,44 +1,29 @@
 ## PROG8180 Web Technologies - Assignment 3
 
 - I have tested using **Google Chrome Browser**, Please review my works with Chrome Browser.
-- I linked to Bootstrap and JQuery in the my web page, so please review my works under the internet connected environment.
 
 ##Part 1
 
   - **Development Environment** : WAMP Server
-  - **Database name** : pizzeria
-  - **Table names** : orders, users
+  - **Database name** : assignment3
+  - **Table names** : articles, users, comments, tags, articles_tags
   - **Database access user**  : user : **root**  / password : **root**
     - Configuration for connection of database was already set in app.php in config folder of CakePHP 
     - Database schema are located in the the folder of 'config/schema' in CakePHP structure
-      - **Schema files name** : **pizzeria_DB.sql** which includes creating Database, Tables, and insert data already exist
+      - **Schema files name** : **Assignment3_DB.sql** which includes creating Database, Tables, and insert data already exist
   - I did not allow customer to sign up, only employees as admin can access to Order List after Login.
     - Because my concept and understanding about the requirements is as below;
     - Customer can only make an order with order page and ask for employee when customer wnat to change order infomation
   - I did not implement to validate specific details such as the wrong url address.
 
-####Pizzeria Web Url 
-  - **Order page** : ```http://localhost/pizzeria/orders/add```
-  - **Login Page** : ```http://localhost/pizzeria/users/login```
+####Blog Articles Url 
+  - **Articles List** : ```http://localhost/Assignment3/Articles/index```
+  - **Add new article** : ```http://localhost/Assignment3/articles/add```
+  - **Log in** : ```http://localhost/Assignment3/users/login```
     - **login access as admin** : user name / password --> **admin** / **admin**
-      - above pizzeria_DB.sql includes admin data in the users table
+      - above Assignment3_DB.sql includes admin data in the users table
       - if users table has no data of admin, can add the add page as below;
-        - http://localhost/pizzeria/users/add
-  - **Order list** : ```http://localhost/pizzeria/orders/index```
-    - Order list can be shown after login as admin/admin
+        - http://localhost/Assignment3/users/add
+      - another Author login: all Authors password are same with 'aaa'
 
-##Part 2
 
-I implemented responsive web and 4 x 4 matrix, using JQuery, and adapted to responsive web with W3.CSS. 
-
-####Folder Structure of web pages is as below:
-```
-  Part 2
-   |-- css
-   |    `--w3.css
-   |-- img
-   |    `--list01.jpg ~ list16.jpg
-   |-- js
-   |    `--script.js
-   `-- index.html
-```
