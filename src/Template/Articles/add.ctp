@@ -15,14 +15,11 @@
 		echo $this->Form->input('title');
 		echo $this->Form->input('body', ['rows' => '3']);
 
-		$options = [
-			'1' => 'Food',
-			'2' => 'Fun',
-			'3' => 'Family',
-			'4' => 'Fiction',
-			'5' => 'Documentary',
-			'6' => 'Action',
-		];
+		$optons = [];
+
+		foreach($tags as $tag){
+			$options[$tag->id] = $tag->tag;
+		}
 		
 		echo $this->Form->select('tags',  $options, [
 				'multiple' => 'checkbox'

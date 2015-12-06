@@ -1,9 +1,11 @@
 <!-- File: src/Template/Articles/index.ctp -->
-
-
 <div id="logout">
 	<?php
 		if($loginuser['id'] != null){
+			if($loginuser['role'] == 'admin'){
+				echo $this->Html->link('Tag list', ['controller' => 'Tags', 'action' => 'index']); 
+				echo " | ";				
+			}		
 			echo $this->Html->link('Log Out', ['controller' => 'Users', 'action' => 'logout']); 
 		}else{
 			echo $this->Html->link('Log In', ['controller' => 'Users', 'action' => 'login']);
@@ -18,7 +20,7 @@
 			<th>Title</th>
 			<th>Author</th>
 			<?php
-				//debug($loginuser['role']);
+
 				if($loginuser['id'] != null){
 					echo "<th>Comments</th>";			
 				}

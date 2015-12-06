@@ -19,7 +19,7 @@ class CommentsController extends AppController
                 $this->Flash->success(__('The comment has been saved.'));
                 return $this->redirect(['controller' => 'Articles', 'action' => 'index']);
             }
-            $this->Flash->error(__('Unable to add the user.'));
+            $this->Flash->error(__('Unable to add the comment.'));
         }
         $this->set('comment', $comment);
     }
@@ -42,7 +42,7 @@ class CommentsController extends AppController
 			return true;
 		}
 
-		// The owner of an article can edit and delete it
+		// The owner of an comment can edit and delete it
 		if (in_array($this->request->action, ['edit', 'delete'])) {
 			$commentId = (int)$this->request->params['pass'][0];
 			return true;

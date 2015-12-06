@@ -40,20 +40,4 @@ class AppController extends Controller
     {
         $this->Auth->allow(['index', 'view', 'display']);
     }
-	
-    /**
-     * Before render callback.
-     *
-     * @param \Cake\Event\Event $event The beforeRender event.
-     * @return void
-
-    public function beforeRender(Event $event)
-    {
-        if (!array_key_exists('_serialize', $this->viewVars) &&
-            in_array($this->response->type(), ['application/json', 'application/xml'])
-        ) {
-            $this->set('_serialize', true);
-        }
-    }
-    */	
 }
