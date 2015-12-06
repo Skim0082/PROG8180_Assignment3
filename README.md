@@ -22,6 +22,8 @@
   - **Articles List** : ```http://localhost/Assignment3/articles/index```
   - **Add new article** : ```http://localhost/Assignment3/articles/add```
   - **Log in** : ```http://localhost/Assignment3/users/login```
+  - **Tag List** : ```http://localhost/Assignment3/Tags/index```
+  - **Tag Add** : ```http://localhost/Assignment3/Tags/add```
 
 ## LogIn Information
   - **login access as admin** : user name / password --> **admin** / **admin**
