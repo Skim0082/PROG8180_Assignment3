@@ -1,9 +1,9 @@
 {
-    "name": "cakephp/app",
-    "description": "CakePHP skeleton app",
-    "homepage": "http://cakephp.org",
-    "type": "project",
-    "license": "MIT",
+    "name": "Articles Blog",
+    "description": "PROG8180 Web Technologies - Assignment 3",
+    "homepage": "http://localhost/Assignment3/",
+    "type": "Assignment 3",
+    "license": "SungJoe KIM",
     "require": {
         "php": ">=5.4.16",
         "cakephp/cakephp": "~3.1",

@@ -3,6 +3,8 @@
 
 namespace App\Controller;
 
+use App\Controller\TagsController;
+
 class ArticlesController extends AppController{
 
     public function index()
@@ -29,7 +31,13 @@ class ArticlesController extends AppController{
 	
     public function add()
     {
+    	$tagcontroller = new TagsController();
+        $tags = $tagcontroller->Tags->find('all');
+        $this->set(compact('tags'));   	
+
         $article = $this->Articles->newEntity();
+
+        $this->set(compact('articles'));        
 		
         if ($this->request->is('post')) {
 
@@ -62,9 +70,14 @@ class ArticlesController extends AppController{
 		
 		$loginuser = $this->Auth->user();
 		$this->set(compact('loginuser'));		
-    }	
+    }
+
 	public function edit($id = null)
 	{
+    	$tagcontroller = new TagsController();
+        $tags = $tagcontroller->Tags->find('all');
+        $this->set(compact('tags'));   	
+
 		$article = $this->Articles->get($id, [
 			'contain' => ['Comments', 'UnapprovedComments', 'Tags']
 		]);
@@ -91,6 +104,7 @@ class ArticlesController extends AppController{
 		$loginuser = $this->Auth->user();
 		$this->set(compact('loginuser'));		
 	}	
+
 	public function delete($id)
 	{
 		$this->request->allowMethod(['post', 'delete']);
@@ -119,5 +133,4 @@ class ArticlesController extends AppController{
 
 		return parent::isAuthorized($user);
 	}	
-	
 }
