@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Prog8180 assignment3 : Web Technologies Assignment 3 - Add the associations with CakePHP tutorial">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Prog8180 assignment3</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/Skim0082/PROG8180_Assignment3">View on GitHub</a>
+
+          <h1 id="project_title">Prog8180 assignment3</h1>
+          <h2 id="project_tagline">Web Technologies Assignment 3 - Add the associations with CakePHP tutorial</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/Skim0082/PROG8180_Assignment3/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/Skim0082/PROG8180_Assignment3/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h2>
+<a id="prog8180-web-technologies---assignment-3" class="anchor" href="#prog8180-web-technologies---assignment-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>PROG8180 Web Technologies - Assignment 3</h2>
+
+<ul>
+<li>I have tested using <strong>Google Chrome Browser</strong>, Please review my works with Chrome Browser.</li>
+<li>I worked it with <strong>cakephp version 3.1.2</strong>
+</li>
+</ul>
+
+<h2>
+<a id="cakephp-association" class="anchor" href="#cakephp-association" aria-hidden="true"><span class="octicon octicon-link"></span></a>CakePHP Association</h2>
+
+<ul>
+<li>
+<strong>Development Environment</strong> : WAMP Server</li>
+<li>
+<strong>Database name</strong> : assignment3</li>
+<li>
+<strong>Table names</strong> : articles, users, comments, tags, articles_tags</li>
+<li>
+<strong>Database access user</strong>  : user : <strong>root</strong>  / password : <strong>root</strong>
+
+<ul>
+<li>Configuration for connection of database was already set in app.php in config folder of CakePHP </li>
+<li>Database schema are located in the folder of 'config/schema' in CakePHP structure
+
+<ul>
+<li>
+<strong>Schema files name</strong> : <strong>Assignment3_DB.sql</strong> which includes creating Database, Tables, and insert data already exist</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>I did not implement to validate specific details such as the wrong url address.</li>
+<li>public user (not logedin) only can see title, body, tags (no comments)</li>
+<li>author logedin can see only approved comments</li>
+<li>admin can see all and edit, delete comments as well.</li>
+</ul>
+
+<h3>
+<a id="blog-articles-url" class="anchor" href="#blog-articles-url" aria-hidden="true"><span class="octicon octicon-link"></span></a>Blog Articles Url</h3>
+
+<ul>
+<li>
+<strong>'Assignment3'</strong> in the below URL is <strong>case sensitive</strong> and others are case insensitive.</li>
+<li>
+<strong>Articles List</strong> : <code>http://localhost/Assignment3/articles/index</code>
+</li>
+<li>
+<strong>Add new article</strong> : <code>http://localhost/Assignment3/articles/add</code>
+</li>
+<li>
+<strong>Log in</strong> : <code>http://localhost/Assignment3/users/login</code>
+</li>
+<li>
+<strong>Tag List</strong> : <code>http://localhost/Assignment3/Tags/index</code>
+</li>
+<li>
+<strong>Tag Add</strong> : <code>http://localhost/Assignment3/Tags/add</code>
+</li>
+</ul>
+
+<h2>
+<a id="login-information" class="anchor" href="#login-information" aria-hidden="true"><span class="octicon octicon-link"></span></a>LogIn Information</h2>
+
+<ul>
+<li>
+<strong>login access as admin</strong> : user name / password --&gt; <strong>admin</strong> / <strong>admin</strong>
+
+<ul>
+<li>above Assignment3_DB.sql includes admin data in the users table</li>
+<li>if users table has no data of admin, can add the add page as below;
+
+<ul>
+<li>http://localhost/Assignment3/users/add</li>
+</ul>
+</li>
+</ul>
+</li>
+<li> <strong>Author password</strong> : all Authors password are same with <strong>aaa</strong>
+</li>
+</ul>
+
+<p><img src="https://github.com/Skim0082/PROG8180_Assignment3/blob/master/tablesRelation.JPG" alt="Tables Relationship">
+<img src="https://github.com/Skim0082/PROG8180_Assignment3/blob/master/Screenshot01.png" alt="Screen Shot"></p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Prog8180 assignment3 maintained by <a href="https://github.com/Skim0082">Skim0082</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
